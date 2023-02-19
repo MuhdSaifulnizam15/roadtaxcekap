@@ -28,6 +28,7 @@ import {
   Checkbox,
   Link,
   Select,
+  Center,
 } from '@chakra-ui/react';
 import { FaAngleLeft, FaCarAlt, FaMotorcycle } from 'react-icons/fa';
 
@@ -47,7 +48,7 @@ export default function Hero() {
     onClose();
   };
 
-  const handleSelect = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleSelect = (event: ChangeEvent<HTMLSelectElement>) => {
     setCoverType(event.target.value);
   };
 
@@ -78,7 +79,7 @@ export default function Hero() {
             shadow='base'
             borderWidth='1px'
             w='100%'
-            bg={insuranceType === 'car' ? 'yellow.300' : null}
+            bg={insuranceType === 'car' ? 'yellow.300' : undefined}
             onClick={() => setInsuranceType('car')}
             borderColor={useColorModeValue('yellow.200', 'yellow.500')}
             borderRadius={'xl'}
@@ -96,7 +97,7 @@ export default function Hero() {
             shadow='base'
             borderWidth='1px'
             w='100%'
-            bg={insuranceType === 'motor' ? 'yellow.300' : null}
+            bg={insuranceType === 'motor' ? 'yellow.300' : undefined}
             onClick={() => setInsuranceType('motor')}
             borderColor={useColorModeValue('yellow.200', 'yellow.500')}
             borderRadius={'xl'}
@@ -135,7 +136,7 @@ export default function Hero() {
             shadow='base'
             borderWidth='1px'
             w='100%'
-            bg={registrationInfo === 'nric' ? 'yellow.300' : null}
+            bg={registrationInfo === 'nric' ? 'yellow.300' : undefined}
             onClick={() => setRegistrationInfo('nric')}
             borderColor={useColorModeValue('yellow.200', 'yellow.500')}
             borderRadius={'xl'}
@@ -153,7 +154,7 @@ export default function Hero() {
             shadow='base'
             borderWidth='1px'
             w='100%'
-            bg={registrationInfo === 'passport' ? 'yellow.300' : null}
+            bg={registrationInfo === 'passport' ? 'yellow.300' : undefined}
             onClick={() => setRegistrationInfo('passport')}
             borderColor={useColorModeValue('yellow.200', 'yellow.500')}
             borderRadius={'xl'}
@@ -171,7 +172,7 @@ export default function Hero() {
             shadow='base'
             borderWidth='1px'
             w='100%'
-            bg={registrationInfo === 'company' ? 'yellow.300' : null}
+            bg={registrationInfo === 'company' ? 'yellow.300' : undefined}
             onClick={() => setRegistrationInfo('company')}
             borderColor={useColorModeValue('yellow.200', 'yellow.500')}
             borderRadius={'xl'}
@@ -349,7 +350,11 @@ export default function Hero() {
         </FormControl>
 
         <FormControl display='flex' alignItems='center' mt='2%'>
-          <Checkbox colorScheme='green' defaultChecked={tnc} onChange={() => setTnc(!tnc)}>
+          <Checkbox
+            colorScheme='green'
+            defaultChecked={tnc}
+            onChange={() => setTnc(!tnc)}
+          >
             I agree to the{' '}
             <Link target='_blank' href='/tnc' color='blue.500'>
               Terms & Conditions
@@ -358,7 +363,11 @@ export default function Hero() {
         </FormControl>
 
         <FormControl display='flex' alignItems='center' mt='2%'>
-          <Checkbox colorScheme='green' defaultChecked={sendThroughWhatsapp} onChange={() => setSendThroughWhatsapp(!sendThroughWhatsapp)}>
+          <Checkbox
+            colorScheme='green'
+            defaultChecked={sendThroughWhatsapp}
+            onChange={() => setSendThroughWhatsapp(!sendThroughWhatsapp)}
+          >
             Yes, send my quote via Whatsapp
           </Checkbox>
         </FormControl>
@@ -381,8 +390,8 @@ export default function Hero() {
         >
           <ModalOverlay />
           <ModalContent>
-            <ModalHeader align='center'>
-              Quotation Insurans & Roadtax Kenderaan
+            <ModalHeader>
+              <Center>Quotation Insurans & Roadtax Kenderaan</Center>
             </ModalHeader>
             {/* <ModalCloseButton size='lg' /> */}
             <ModalBody

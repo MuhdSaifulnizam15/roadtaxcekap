@@ -76,7 +76,7 @@ const TestimonialAvatar = ({
 }) => {
   return (
     <Flex align={'center'} justify={'center'} mt={8} direction={'row'}>
-      <Avatar src={src} alt={name} mr={'2'} size='xl' />
+      <Avatar src={src} mr={'2'} size='xl' />
       <Flex align={'center'} justify={'center'} direction={'column'}>
         <Stack spacing={-1} justify={'center'} align={'center'}>
           <Text fontWeight={600}>{name}</Text>

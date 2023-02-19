@@ -11,6 +11,7 @@ import {
   AccordionButton,
   AccordionIcon,
   AccordionPanel,
+  Center
 } from '@chakra-ui/react';
 
 const faqList = [
@@ -64,22 +65,24 @@ export default function Faqs() {
       <Header />
       <Title title='Frequently Asked Question' />
 
-      <Box py={10} px={10} align='center'>
-        <Accordion allowToggle>
-          {faqList.map((item) => {
-            return (
-              <AccordionItem key={item.id} w={{ base: '100%', sm: '80%', md: '70%', lg: '70%' }}>
-                <AccordionButton>
-                  <Box flex='1' textAlign='left' as='b'>
-                    {item.question}
-                  </Box>
-                  <AccordionIcon />
-                </AccordionButton>
-                <AccordionPanel pb={4} textAlign='left'>{item.answer}</AccordionPanel>
-              </AccordionItem>
-            );
-          })}
-        </Accordion>
+      <Box py={10} px={10}>
+        <Center>
+          <Accordion allowToggle>
+            {faqList.map((item) => {
+              return (
+                <AccordionItem key={item.id} w={{ base: '100%', sm: '80%', md: '70%', lg: '70%' }}>
+                  <AccordionButton>
+                    <Box flex='1' textAlign='left' as='b'>
+                      {item.question}
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                  <AccordionPanel pb={4} textAlign='left'>{item.answer}</AccordionPanel>
+                </AccordionItem>
+              );
+            })}
+          </Accordion>
+        </Center>
       </Box>
 
       <Footer />
