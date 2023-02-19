@@ -24,7 +24,7 @@ const TestimonialContent = ({ children }: { children: ReactNode }) => {
       align={'center'}
       pos={'relative'}
       _after={{
-        content: '',
+        content: '""',
         w: 0,
         h: 0,
         borderLeft: 'solid transparent',
