@@ -10,8 +10,8 @@ import {
 } from '@chakra-ui/react';
 import { ReactNode } from 'react';
 import { BsPerson } from 'react-icons/bs';
-import { MdAutorenew } from "react-icons/md";
-import { RiRoadsterFill } from "react-icons/ri";
+import { MdAutorenew } from 'react-icons/md';
+import { RiRoadsterFill } from 'react-icons/ri';
 
 interface StatsCardProps {
   title: string;
@@ -50,7 +50,7 @@ function StatsCard(props: StatsCardProps) {
 
 export default function BasicStatistics() {
   return (
-    <Box maxW="7xl" mx={'auto'} pt={5} pb={10} px={{ base: 2, sm: 12, md: 17 }}>
+    <Box maxW='7xl' mx={'auto'} pt={5} pb={10} px={{ base: 2, sm: 12, md: 17 }}>
       <chakra.h1
         textAlign={'center'}
         fontSize={'4xl'}
