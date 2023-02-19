@@ -262,41 +262,40 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "Inspiration",
+    label: "Laman Utama",
+    href: '/'
+  },
+  {
+    label: "Tentang Kami",
+    href: "/about-us",
+  },
+  {
+    label: "Blog",
+    href: "/blog",
+  },
+  {
+    label: "Bantuan",
     children: [
       {
-        label: "Explore Design Work",
-        subLabel: "Trending Design to inspire you",
-        href: "#",
+        label: "FAQs",
+        subLabel: "Frequent Asked Question",
+        href: "/faqs",
       },
       {
-        label: "New & Noteworthy",
-        subLabel: "Up-and-coming Designers",
-        href: "#",
+        label: "Cara Renew Insurans",
+        subLabel: "Langkah untuk renew insurans dan roadtax",
+        href: "/renew-guide",
+      },
+      {
+        label: "Sertai Kami",
+        subLabel: "Kami sedang mencari agen serta rakan kerja",
+        href: "/join-us",
+      },
+      {
+        label: "Hubungi Kami",
+        subLabel: "Sila hubungi kami untuk sebarang pertanyaan",
+        href: "/contact-us",
       },
     ],
-  },
-  {
-    label: "Find Work",
-    children: [
-      {
-        label: "Job Board",
-        subLabel: "Find your dream design job",
-        href: "#",
-      },
-      {
-        label: "Freelance Projects",
-        subLabel: "An exclusive list for contract work",
-        href: "#",
-      },
-    ],
-  },
-  {
-    label: "Learn Design",
-    href: "#",
-  },
-  {
-    label: "Hire Designers",
-    href: "#",
   },
 ];

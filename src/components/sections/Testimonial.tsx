@@ -76,7 +76,7 @@ const TestimonialAvatar = ({
 }) => {
   return (
     <Flex align={"center"} justify={"center"} mt={8} direction={"row"}>
-      <Avatar src={src} alt={name} mr={"2"} />
+      <Avatar src={src} alt={name} mr={"2"} size="xl" />
       <Flex align={"center"} justify={"center"} direction={"column"}>
         <Stack spacing={-1} justify={"center"} align={"center"}>
           <Text fontWeight={600}>{name}</Text>
@@ -95,7 +95,7 @@ const TestimonialAvatar = ({
 export default function WithSpeechBubbles() {
   return (
     <Box bg={useColorModeValue("gray.100", "gray.700")}>
-      <Container maxW={"7xl"} py={16} as={Stack} spacing={12}>
+      <Container maxW={"7xl"} pb={16} pt={6} as={Stack} spacing={12}>
         <Stack spacing={0} align={"center"}>
           <Heading>Our Clients Speak</Heading>
           <Text>We have been working with clients across Malaysia</Text>

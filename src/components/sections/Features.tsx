@@ -15,13 +15,38 @@ import { ReactElement } from "react";
 import { FcAssistant, FcDonate, FcInTransit } from "react-icons/fc";
 
 // Replace test data with your own
-const features = Array.apply(null, Array(6)).map(function (x, i) {
-  return {
-    id: i,
-    title: "Lorem ipsum dolor sit amet",
-    text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.",
-  };
-});
+const features = [
+  {
+    id: 1,
+    title: "TRANSFER OF VEHICLE OWNERSHIP",
+    text: "Avoid the hassel waiting in line at JPJ office. Do your transfer of vehicle ownership at our outlets",
+  },
+  {
+    id: 2,
+    title: "4-HOUR EXPRESS DELIVERY",
+    text: "Get road tax delivered to your doorstep within 4 hours. We collaborate with reliable riders and courier service such as Lalamove, Grab and Citylink",
+  },
+  {
+    id: 1,
+    title: "TRAFFIC SUMMONS",
+    text: "Oops, receive a traffic summon ? We can help you settle summons from MBPJ, JPJ, DBKL and PDRM",
+  },
+  {
+    id: 2,
+    title: "ONLINE & OFFLINE RENEWAL SERVICES",
+    text: "You can renew either at our 15 MYEG outlets around Klang Valley or via our online system. Outlets can be found near JPJ, Post Office and shopping malls",
+  },
+  {
+    id: 1,
+    title: "DRIVING LICENSE",
+    text: "Renew your driving license with us at your convenience",
+  },
+  {
+    id: 2,
+    title: "COMPARE & CHOOSE MADE EASY",
+    text: "It’s easy to compare and choose a variety of insurance to spot the one that suits your needs",
+  },
+];
 
 interface FeatureProps {
   title: string;
@@ -56,43 +81,15 @@ export default function Features() {
       <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
         <Heading fontSize={"3xl"}>Our Services</Heading>
         <Text color={"gray.600"} fontSize={"xl"}>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua.
+          Roadtax Cekap menyediakan servis renew roadtax insurans, tukar nama
+          kenderaan, puspakom & urusan JPJ. Kami hanya menyediakan Takaful
+          kerana ia patuh Syariah di sisi Islam berbanding Insurans. Kami adalah
+          ejen berdaftar & sah di bawah Etiqa Takaful, Zurich Takaful, Takaful
+          Ikhlas & Takaful Malaysia.
         </Text>
       </Stack>
 
       <Container maxW={"6xl"} mt={10}>
-        {/* <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10}>
-          <Feature
-            icon={<Icon as={FcAssistant} w={10} h={10} />}
-            title={"Lifetime Support"}
-            text={
-              "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
-            }
-          />
-          <Feature
-            icon={<Icon as={FcDonate} w={10} h={10} />}
-            title={"Unlimited Donations"}
-            text={
-              "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
-            }
-          />
-          <Feature
-            icon={<Icon as={FcInTransit} w={10} h={10} />}
-            title={"Instant Delivery"}
-            text={
-              "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
-            }
-          />
-          <Feature
-            icon={<Icon as={FcInTransit} w={10} h={10} />}
-            title={"Instant Delivery"}
-            text={
-              "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
-            }
-          />
-        </SimpleGrid> */}
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
           {features.map((feature) => (
             <HStack key={feature.id} align={"top"}>

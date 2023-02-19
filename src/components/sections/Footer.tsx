@@ -11,8 +11,15 @@ import {
   chakra,
   useColorModeValue,
   LinkOverlay,
+  Flex,
 } from "@chakra-ui/react";
-import { FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaYoutube,
+  FaInstagram,
+  FaWhatsapp,
+  FaFacebookMessenger,
+} from "react-icons/fa";
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (
@@ -67,7 +74,7 @@ export default function LargeWithAppLinksAndSocial() {
             <ListHeader>Company</ListHeader>
             <Link href={"#"}>About Us</Link>
             <Link href={"#"}>Blog</Link>
-            <Link href={"#"}>Careers</Link>
+            <Link href={"#"}>Join Us</Link>
             <Link href={"#"}>Contact Us</Link>
           </Stack>
 
@@ -75,13 +82,14 @@ export default function LargeWithAppLinksAndSocial() {
             <ListHeader>Support</ListHeader>
             <Link href={"#"}>FAQs</Link>
             <Link href={"#"}>Roadtax</Link>
+            <Link href={"#"}>Terms & Conditions</Link>
             <Link href={"#"}>Renewal Guide</Link>
           </Stack>
 
           <Stack align={"flex-start"}>
             <ListHeader>Talk to us</ListHeader>
             <Button
-              px={8}
+              px={6}
               color={"white"}
               bg={"green"}
               rounded={"md"}
@@ -90,18 +98,22 @@ export default function LargeWithAppLinksAndSocial() {
                 boxShadow: "lg",
               }}
             >
-              <LinkOverlay
-                target="_blank"
-                href={
-                  "https://api.whatsapp.com/send?phone=601154188237&text=Quotation%20Takaful%2C%20RoadTax%20%26%20Urusan%20JPJ.%20%20F%26A%20MOTORS.%F0%9F%8F%8D%EF%B8%8F%F0%9F%9A%97"
-                }
-              >
-                Whatsapp
-              </LinkOverlay>
+              <Flex direction={"row"} align={"center"} justify={"center"}>
+                <FaWhatsapp size={"1.5em"} />
+                <LinkOverlay
+                  ml={"1"}
+                  target="_blank"
+                  href={
+                    "https://api.whatsapp.com/send?phone=601154188237&text=Quotation%20Takaful%2C%20RoadTax%20%26%20Urusan%20JPJ.%20%20F%26A%20MOTORS.%F0%9F%8F%8D%EF%B8%8F%F0%9F%9A%97"
+                  }
+                >
+                  Whatsapp
+                </LinkOverlay>
+              </Flex>
             </Button>
 
             <Button
-              px={8}
+              px={6}
               color={"white"}
               bg={"blue"}
               rounded={"md"}
@@ -110,9 +122,16 @@ export default function LargeWithAppLinksAndSocial() {
                 boxShadow: "lg",
               }}
             >
-              <LinkOverlay target="_blank" href={"https://m.me/famotorsmy"}>
-                Messenger
-              </LinkOverlay>
+              <Flex direction={"row"} align={"center"} justify={"center"}>
+                <FaFacebookMessenger size={"1.2em"} />
+                <LinkOverlay
+                  target="_blank"
+                  href={"https://m.me/famotorsmy"}
+                  ml={"1"}
+                >
+                  Messenger
+                </LinkOverlay>
+              </Flex>
             </Button>
           </Stack>
         </SimpleGrid>

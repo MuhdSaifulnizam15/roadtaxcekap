@@ -10,8 +10,8 @@ import {
 } from '@chakra-ui/react';
 import { ReactNode } from 'react';
 import { BsPerson } from 'react-icons/bs';
-import { FiServer } from 'react-icons/fi';
-import { GoLocation } from 'react-icons/go';
+import { MdAutorenew } from "react-icons/md";
+import { RiRoadsterFill } from "react-icons/ri";
 
 interface StatsCardProps {
   title: string;
@@ -50,7 +50,7 @@ function StatsCard(props: StatsCardProps) {
 
 export default function BasicStatistics() {
   return (
-    <Box maxW="7xl" mx={'auto'} pt={5} px={{ base: 2, sm: 12, md: 17 }}>
+    <Box maxW="7xl" mx={'auto'} pt={5} pb={10} px={{ base: 2, sm: 12, md: 17 }}>
       <chakra.h1
         textAlign={'center'}
         fontSize={'4xl'}
@@ -58,21 +58,21 @@ export default function BasicStatistics() {
         fontWeight={'bold'}>
         Reason to choose us? We have serves
       </chakra.h1>
-      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
+      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }} mx={6}>
         <StatsCard
           title={'Users'}
-          stat={'89'}
+          stat={'20'}
           icon={<BsPerson size={'3em'} />}
         />
         <StatsCard
           title={'Renewal'}
-          stat={'100'}
-          icon={<FiServer size={'3em'} />}
+          stat={'35'}
+          icon={<MdAutorenew size={'3em'} />}
         />
         <StatsCard
           title={'Insurance Brands'}
           stat={'4'}
-          icon={<GoLocation size={'3em'} />}
+          icon={<RiRoadsterFill size={'3em'} />}
         />
       </SimpleGrid>
     </Box>
