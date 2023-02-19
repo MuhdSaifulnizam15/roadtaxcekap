@@ -73,17 +73,17 @@ export default function LargeWithAppLinksAndSocial() {
           <Stack align={"flex-start"}>
             <ListHeader>Company</ListHeader>
             <Link href={"/about-us"}>About Us</Link>
-            <Link href={"#"}>Blog</Link>
-            <Link href={"#"}>Join Us</Link>
-            <Link href={"#"}>Contact Us</Link>
+            <Link href={"/blog"}>Blog</Link>
+            <Link href={"/join-us"}>Join Us</Link>
+            <Link href={"/contact-us"}>Contact Us</Link>
           </Stack>
 
           <Stack align={"flex-start"}>
             <ListHeader>Support</ListHeader>
-            <Link href={"#"}>FAQs</Link>
-            <Link href={"#"}>Roadtax</Link>
-            <Link href={"#"}>Terms & Conditions</Link>
-            <Link href={"#"}>Renewal Guide</Link>
+            <Link href={"/faqs"}>FAQs</Link>
+            <Link href={"/roadtax"}>Roadtax</Link>
+            <Link href={"/tnc"}>Terms & Conditions</Link>
+            <Link href={"/renewal-guide"}>Renewal Guide</Link>
           </Stack>
 
           <Stack align={"flex-start"}>
