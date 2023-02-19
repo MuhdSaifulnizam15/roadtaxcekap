@@ -72,7 +72,7 @@ export default function LargeWithAppLinksAndSocial() {
         <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} spacing={8}>
           <Stack align={"flex-start"}>
             <ListHeader>Company</ListHeader>
-            <Link href={"#"}>About Us</Link>
+            <Link href={"/about-us"}>About Us</Link>
             <Link href={"#"}>Blog</Link>
             <Link href={"#"}>Join Us</Link>
             <Link href={"#"}>Contact Us</Link>

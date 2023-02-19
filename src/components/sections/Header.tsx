@@ -16,6 +16,7 @@ import {
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
+  Image,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -63,14 +64,17 @@ export default function Header() {
             aria-label={"Toggle Navigation"}
           />
         </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
-          <Text
-            textAlign={useBreakpointValue({ base: "center", md: "left" })}
-            fontFamily={"heading"}
-            color={useColorModeValue("gray.800", "white")}
-          >
-            Logo
-          </Text>
+        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }} align="center">
+          <Image
+            alt={"Hero Image"}
+            fit={"cover"}
+            align={"center"}
+            w={"50px"}
+            h={"50px"}
+            src={
+              "/icon.png"
+            }
+          />
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
@@ -263,7 +267,7 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: "Laman Utama",
-    href: '/'
+    href: "/",
   },
   {
     label: "Tentang Kami",
